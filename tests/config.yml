@@ -1,0 +1,41 @@
+# Test Configuration
+# Update these values for your local environment
+
+baseUrl: "http://localhost:4200"
+apiUrl: "http://localhost:8000"
+
+# Test user credentials
+users:
+  userA:
+    username: "testuser1"
+    email: "testuser1@example.com"
+    password: "TestPassword123!"
+    incorrectPassword: "IncorrectPassword123!"
+  
+  userB:
+    username: "testuser2"
+    email: "testuser2@example.com"
+    password: "TestPassword123!"
+    incorrectPassword: "IncorrectPassword123!"
+
+# Follow relationships for tests
+followRelationships:
+  - follower: "userA"
+    following: "userB"
+
+# Test data
+testData:
+  article:
+    title: "Test Article Title"
+    description: "Test article description"
+    body: "This is the test article body content."
+    tags: ["testing", "automation", "tag"]
+  
+  comment:
+    body: "This is a test comment"
+
+# Timeouts (in milliseconds)
+timeouts:
+  default: 30000
+  navigation: 60000
+
